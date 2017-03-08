@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/b2e078f69389404b403ee0e515874386cf88e341/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5e5ff373c4d20e46fbb0c2b4ca48d941cb286c70/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/11caf2c6e213cc04cf26e4309eed4c7030c0435d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_05c572bb1a66709a6b4845824cf417713c8f4d10/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/dff2f17b3b3408c805e1d9d2681c61fe40cd29b9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9704253c49b1b147d7df116d79524b494a3d76d2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b0d6f52654932e1c86f9d4b6fc0e104006cad4ad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/102e160d835a8270887ba45e5b231960eca02ba5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2c27908fbd8f632a818418763c02fb4b50e8fe93/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/f339ddb6e23ab30fe3b20effa1aee426d06583b9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b6d3e9b048973981c9f1a264d43c7d28faf23d53/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="92f6bf1671a6731815d4217ea2b0d98e687f09c9">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_dec919f9f3c3e8a73d7d77baf0ee80d736b6a573/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/823458f95425eb46f737512ede01cfb9c485b8c9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6e8a8b2ea7ceb17a2a1102ad4b2e91ab65a004ea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/684676b305771aa909de9de9067208b640f7483d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7113302c965566b66df46c6ca75ea301576114a5">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c7e1f86b7e52f393cd3e8ea8b466968aff9aa1b4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/Documents/Android/SkillCourt/app/libs/jsch-0.1.54.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d7d8aba0d11e8cd2f775f47cd3a6cfbf2837da4">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/2/jsch-0.1.54_fc4013b08674f5d258b1fb4cddb456aaf6b5b430/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.1/constraint-layout-solver-1.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1ad79631209e77b0a2730fc112b4cc0c66a95132">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.1_4f7264214a7b5952271850a42cddcdbdada34ac3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/162a10e1d6f28e0f09d0f1c5b9c586a9ebd2a1e9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2fb4750423def732b1dd3e5e699e726653ffe5b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/36a28442729b9f0ea0446c86303c4a06ea13b2fd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2ae0296333cb5415f715586022c203b71e5d3774/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/4cd192f86322b5ce8cd89d7920464a0f1d87f790/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9eca6e31a1dbf0aa40de479cca5b6cb02914c96d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/d364043498eda0199e8aaed8590a12f1cfe2488a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_74342821c1e69a4dbff5ad0217d71e518914273f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/69f419f8d558c935c95a07774beff3ea00dd8fdd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d25aa102832b1508538f13274739d1bdaf431357/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.2.0_adf851aa85ca8b437079733487d84ec52f9ad1bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jvelazco1337/.android/build-cache/c178aa54ffb778517f34454f5e19b254e5076567/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="/Users/jvelazco1337/Documents/Android/SkillCourt/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d3161432c19fc4709eb9badfcbdd2d1c67ded72c/classes.dex" />
+    </item>
+
+</items>

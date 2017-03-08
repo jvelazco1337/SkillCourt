@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/pi_image2"
+    tools:context="skillcourt.skillcourt.AddScreen"
+    android:weightSum="1">
+
+
+    <TextView
+        android:text="Port Number:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/portTextView"
+        android:textSize="18sp"
+        android:textColor="?attr/colorPrimary"
+        android:layout_below="@+id/ipTextView"
+        android:layout_alignLeft="@+id/ipTextView"
+        android:layout_alignStart="@+id/ipTextView"/>
+
+    <Button
+        android:text="Back"
+        android:id="@+id/backButton"
+        android:textAlignment="center"
+        android:elevation="0dp"
+        android:layout_row="33"
+        android:layout_column="0"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="31dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:text="Username:"
+        android:layout_marginTop="18dp"
+        android:id="@+id/userTextView"
+        android:textSize="18sp"
+        android:textColor="?attr/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/backButton"
+        android:layout_alignEnd="@+id/backButton"/>
+
+    <TextView
+        android:text="Password:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/passTextView"
+        android:textSize="18sp"
+        android:textColor="?attr/colorPrimary"
+        android:layout_below="@+id/userEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:text="Description:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionTextView"
+        android:textSize="18sp"
+        android:textColor="?attr/colorPrimary"
+        android:layout_weight="4.42"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_alignBaseline="@+id/descriptionEditText"
+        android:layout_alignBottom="@+id/descriptionEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:text="IP Address:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:id="@+id/ipTextView"
+        android:textSize="18sp"
+        android:textColor="?attr/colorPrimary"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_below="@+id/passTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:text="Add"
+        android:id="@+id/addPiButton"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_above="@+id/backButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/userEditText"
+        android:hint="username"
+        android:textColor="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:textColorHint="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_alignBaseline="@+id/userTextView"
+        android:layout_alignBottom="@+id/userTextView"
+        android:layout_alignLeft="@+id/addPiButton"
+        android:layout_alignStart="@+id/addPiButton"
+        android:textAlignment="center"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/passEditText"
+        android:textColor="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:textColorHint="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:hint="password"
+        android:layout_alignBaseline="@+id/passTextView"
+        android:layout_alignBottom="@+id/passTextView"
+        android:layout_alignLeft="@+id/userEditText"
+        android:layout_alignStart="@+id/userEditText"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/ipEditText"
+        android:hint="ip address"
+        android:textColor="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:textColorHint="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:layout_alignBaseline="@+id/ipTextView"
+        android:layout_alignBottom="@+id/ipTextView"
+        android:layout_alignLeft="@+id/passEditText"
+        android:layout_alignStart="@+id/passEditText"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/portEditText"
+        android:hint="port number"
+        android:textColor="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:textColorHint="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:textAlignment="center"
+        android:layout_alignBaseline="@+id/portTextView"
+        android:layout_alignBottom="@+id/portTextView"
+        android:layout_alignLeft="@+id/ipEditText"
+        android:layout_alignStart="@+id/ipEditText"/>
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="description"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:textColorHint="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/portEditText"
+        android:layout_alignLeft="@+id/portEditText"
+        android:layout_alignStart="@+id/portEditText"/>
+
+</RelativeLayout>
