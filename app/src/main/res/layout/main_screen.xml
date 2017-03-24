@@ -65,7 +65,34 @@
         android:layout_width="100dp"
         android:layout_height="50dp"/>
 
+    <Button
+        android:id="@+id/buttonSend0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/testButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/testButton"
+        android:layout_toRightOf="@+id/testButton"
+        android:text="Send 0"/>
 
+    <Button
+        android:id="@+id/buttonSend1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonSend0"
+        android:layout_toEndOf="@+id/buttonSend0"
+        android:layout_toRightOf="@+id/buttonSend0"
+        android:text="Send1"/>
+
+    <Button
+        android:id="@+id/buttonSend4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonSend1"
+        android:layout_toEndOf="@+id/buttonSend1"
+        android:layout_toRightOf="@+id/buttonSend1"
+        android:text="Send 4"/>
 
 
 </RelativeLayout>

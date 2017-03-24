@@ -13,11 +13,19 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
+import java.io.*;
+import java.net.*;
+
 import java.util.Properties;
 
 public class MainScreen extends AppCompatActivity
 {
     Button myButton;
+
+    static Socket clientSocket;
+    static String homeIp="10.109.153.8"; //internal ip of server (aka Pi in this case)
+    static int port=5454;
+    String response;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -32,15 +40,132 @@ public class MainScreen extends AppCompatActivity
         {
             e.printStackTrace();
         }
+        buttonSend0();
+        buttonSend1();
+        buttonSend4();
         startButton();
         highScoresButton();
         devicesButton();
 
 
 
+    }
 
+    public void buttonSend0()
+    {
+        myButton = (Button) findViewById(R.id.buttonSend0);
+        myButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                new AsyncTask<Integer, Void, Void>()
+                {
+                    @Override
+                    protected Void doInBackground(Integer... params)
+                    {
+                        try {
+                            Socket socket = new Socket(homeIp, port);
+                            InputStream inputStream = socket.getInputStream();
+                            ByteArrayOutputStream byteArrayOutputStream =
+                                    new ByteArrayOutputStream(1024);
+                            byte[] buffer = new byte[1024];
 
+                            int bytesRead;
+                            while ((bytesRead = inputStream.read(buffer)) != -1){
+                                byteArrayOutputStream.write(buffer, 0, bytesRead);
+                            }
 
+                            socket.close();
+                            response = byteArrayOutputStream.toString("UTF-8");
+
+                        } catch (UnknownHostException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                        return null;
+                    }
+                }.execute(1);
+            }
+        });
+    }
+
+    public void buttonSend1()
+    {
+        myButton = (Button) findViewById(R.id.buttonSend1);
+        myButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                new AsyncTask<Integer, Void, Void>()
+                {
+                    @Override
+                    protected Void doInBackground(Integer... params)
+                    {
+                        try
+                        {
+                            clientSocket = new Socket(homeIp, port);
+                            PrintStream out = new PrintStream(clientSocket.getOutputStream());
+                            out.println("1");
+                        } catch (UnknownHostException e)
+                        {
+                            //Log.e("aaa","Don't know about host: "+homeIp+"."+e.getMessage());
+                            System.out.println("Don't know about host: "+homeIp+"."+e.getMessage());
+
+                            //System.exit(1);
+                        } catch (IOException e)
+                        {
+                            //Log.e("aaa","Couldn't get I/O for the connection to:         "+homeIp+"."+e.getMessage());
+                            System.out.println("Couldn't get I/O for the connection to: "+homeIp+"."+e.getMessage());
+
+                            //System.exit(1);
+                        }
+
+                        return null;
+                    }
+                }.execute(1);
+            }
+        });
+    }
+
+    public void buttonSend4()
+    {
+        myButton = (Button) findViewById(R.id.buttonSend4);
+        myButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                new AsyncTask<Integer, Void, Void>()
+                {
+                    @Override
+                    protected Void doInBackground(Integer... params)
+                    {
+                        try
+                        {
+                            clientSocket = new Socket(homeIp, port);
+                            PrintStream out = new PrintStream(clientSocket.getOutputStream());
+                            out.println("4");
+                        } catch (UnknownHostException e)
+                        {
+                            //Log.e("aaa","Don't know about host: "+homeIp+"."+e.getMessage());
+                            System.out.println("Don't know about host: "+homeIp+"."+e.getMessage());
+
+                            //System.exit(1);
+                        } catch (IOException e)
+                        {
+                            //Log.e("aaa","Couldn't get I/O for the connection to:         "+homeIp+"."+e.getMessage());
+                            System.out.println("Couldn't get I/O for the connection to: "+homeIp+"."+e.getMessage());
+
+                            //System.exit(1);
+                        }
+
+                        return null;
+                    }
+                }.execute(1);
+            }
+        });
     }
 
     public void testButton() throws JSchException
