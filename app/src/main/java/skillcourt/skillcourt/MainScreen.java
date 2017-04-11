@@ -23,8 +23,8 @@ public class MainScreen extends AppCompatActivity
     Button myButton;
 
     static Socket clientSocket;
-    static String homeIp="10.109.153.8"; //internal ip of server (aka Pi in this case)
-    static int port=5454;
+    static String homeIp = "10.109.153.8"; // internal ip of server (aka Pi)
+    static int port = 3024;
     String response;
 
     @Override
@@ -104,26 +104,55 @@ public class MainScreen extends AppCompatActivity
                     @Override
                     protected Void doInBackground(Integer... params)
                     {
+                        System.out.println("Setting up");
+
+                        //Exception required here
                         try
                         {
                             clientSocket = new Socket(homeIp, port);
-                            PrintStream out = new PrintStream(clientSocket.getOutputStream());
-                            out.println("1");
-                        } catch (UnknownHostException e)
-                        {
-                            //Log.e("aaa","Don't know about host: "+homeIp+"."+e.getMessage());
-                            System.out.println("Don't know about host: "+homeIp+"."+e.getMessage());
-
-                            //System.exit(1);
                         } catch (IOException e)
                         {
-                            //Log.e("aaa","Couldn't get I/O for the connection to:         "+homeIp+"."+e.getMessage());
-                            System.out.println("Couldn't get I/O for the connection to: "+homeIp+"."+e.getMessage());
-
-                            //System.exit(1);
+                            e.printStackTrace();
                         }
 
-                        return null;
+                        System.out.println("Connected to server");
+
+                        //Exception required here
+                        OutputStream outputstream = null;
+                        try
+                        {
+                            outputstream = clientSocket.getOutputStream();
+                        } catch (IOException e)
+                        {
+                            e.printStackTrace();
+                        }
+
+                        byte sequence = 0x00;
+
+                        while(true)
+                        {
+                            //Exception required here
+                            try
+                            {
+                                outputstream.write(sequence);
+                            } catch (IOException e)
+                            {
+                                e.printStackTrace();
+                            }
+                            sequence ^= 0x01; //toggle between hit and miss
+                            System.out.println("Sent sequence");
+
+                            //Exception required here
+                            try
+                            {
+                                Thread.sleep(1500); //switch every 1.5 seconds
+                            } catch (InterruptedException e)
+                            {
+                                e.printStackTrace();
+                            }
+                        }
+
+
                     }
                 }.execute(1);
             }

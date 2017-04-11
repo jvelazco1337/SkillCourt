@@ -3,93 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="/Users/jvelazco1337/.android/build-cache/1ea825139bed865396e14a64222f4844f8c79d85/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/classes_31d47be2a526213d5e1b226ee81ebe736e6bad3f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jvelazco1337/.android/build-cache/113f41add9eb73fdfae543624af8a793758a756f/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/classes_e30357767beb49d6e025e0a13bf2defa65be4516.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/jvelazco1337/Desktop/SkillCourt/app/libs/jsch-0.1.54.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="0d7d8aba0d11e8cd2f775f47cd3a6cfbf2837da4">
         <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/jsch-0.1.54_112b0cb279fe336145fc064d2b95994c24cc52a8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jvelazco1337/.android/build-cache/2d1713b1091d2976bb9af4d578f0f2e981d68b25/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/classes_3734187269d56787920e73ddc8bd9a808d903951.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jvelazco1337/.android/build-cache/4cc9e88a5bd65bc7c50084161a0564809f1ee202/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
-        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/classes_68050e1e265f0b880f3e0aa008e45cf985b5190b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jvelazco1337/.android/build-cache/ef070feb29d3487a8fa1b21059c8924d408cd746/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/classes_f63d91279de2c6345114af1b600d72cc9d5af8af.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jvelazco1337/.android/build-cache/8be29135eadaba9dcccf07dbc1c0a06369775acd/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/classes_fd4790abcd6c77391614f4989a152efef493bd0d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jvelazco1337/.android/build-cache/ae00ff1bfe9d3778274b6921759a49fa0e297012/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
-        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/classes_7a0119011724b170d90b93d3e8774eb6951b01d5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jvelazco1337/.android/build-cache/111130e9c0a4475e1d86f102b07b3b1f05137a33/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
-        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/classes_381846ab0c206f3ac06ecf75f3f931eda99e6d5d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jvelazco1337/.android/build-cache/042360febe516d24b604d9f1e64930129ed59083/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
-        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/classes_8fbf75cff7aea8f6098c6955e4484b4f92105db6.jar" />
     </item>
 
 </items>
