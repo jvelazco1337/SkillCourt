@@ -29,31 +29,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HighScoresScreen"
-            android:label="High Scores">
-        </activity>
-        <activity
-            android:name=".DevicesScreen"
-            android:label="Devices">
+            android:name=".SpeedScreen"
+            android:label="Acceleration">
         </activity>
         <activity
             android:name=".StartScreen"
             android:label="Start">
         </activity>
         <activity
-            android:name=".AddScreen"
-            android:label="Add">
-        </activity>
-        <activity
-            android:name=".RemoveScreen"
-            android:label="Remove">
-        </activity>
-        <activity
-            android:name=".ShowScreen"
-            android:label="List of Raspberry Pi&apos;s">
-        </activity>
-        <activity android:name=".EditScreen"
-                  android:label="Edit">
+            android:name=".SongSelectionScreen"
+            android:label="Song Selection">
         </activity>
     </application>
 

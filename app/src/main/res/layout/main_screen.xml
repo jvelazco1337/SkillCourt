@@ -14,7 +14,7 @@
 
     <Button
         android:text="Start"
-        android:id="@+id/addButton"
+        android:id="@+id/startButton"
         android:textAlignment="center"
         android:elevation="0dp"
         android:layout_width="228dp"
@@ -26,73 +26,41 @@
         android:layout_column="0"/>
 
     <Button
-        android:text="High Scores"
-        android:id="@+id/removeButton"
-        android:textAlignment="center"
-        android:elevation="0dp"
+        android:id="@+id/speedButton"
         android:layout_width="228dp"
         android:layout_height="100dp"
+        android:layout_above="@+id/buttonSend4"
+        android:layout_alignLeft="@+id/songButton"
+        android:layout_alignStart="@+id/songButton"
+        android:layout_column="0"
+        android:layout_marginBottom="32dp"
         android:layout_row="5"
-        android:layout_column="0"
-        android:layout_marginTop="75dp"
-        android:layout_below="@+id/addButton"
-        android:layout_alignLeft="@+id/addButton"
-        android:layout_alignStart="@+id/addButton"/>
+        android:elevation="0dp"
+        android:text="Speed"
+        android:textAlignment="center"/>
 
     <Button
-        android:text="Devices"
-        android:id="@+id/devicesButton"
-        android:textAlignment="center"
-        android:elevation="0dp"
+        android:id="@+id/songButton"
         android:layout_width="228dp"
         android:layout_height="100dp"
-        android:layout_row="3"
         android:layout_column="0"
-        android:layout_marginTop="75dp"
-        android:layout_below="@+id/removeButton"
-        android:layout_alignLeft="@+id/removeButton"
-        android:layout_alignStart="@+id/removeButton"/>
-
-    <Button
-        android:text="Test"
-        android:id="@+id/testButton"
-        android:textAlignment="center"
+        android:layout_row="5"
         android:elevation="0dp"
-        android:layout_row="3"
-        android:layout_column="0"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="31dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"/>
-
-    <Button
-        android:id="@+id/buttonSend0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/testButton"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/testButton"
-        android:layout_toRightOf="@+id/testButton"
-        android:text="Send 0"/>
-
-    <Button
-        android:id="@+id/buttonSend1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/buttonSend0"
-        android:layout_toEndOf="@+id/buttonSend0"
-        android:layout_toRightOf="@+id/buttonSend0"
-        android:text="Send1"/>
+        android:text="Song Selection"
+        android:textAlignment="center"
+        android:layout_below="@+id/startButton"
+        android:layout_alignLeft="@+id/startButton"
+        android:layout_alignStart="@+id/startButton"
+        android:layout_marginTop="46dp"/>
 
     <Button
         android:id="@+id/buttonSend4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/buttonSend1"
-        android:layout_toEndOf="@+id/buttonSend1"
-        android:layout_toRightOf="@+id/buttonSend1"
-        android:text="Send 4"/>
+        android:text="Send 4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
 
 
 </RelativeLayout>

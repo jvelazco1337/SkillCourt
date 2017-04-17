@@ -10,17 +10,19 @@ import android.widget.Button;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.util.ArrayList;
+
 
 public class StartScreen extends AppCompatActivity
 {
     Button myButton;
     static Socket clientSocket;
     static String homeIp = "10.109.153.8"; // internal ip of server (aka Pi)
-    static int port = 3024;
-    ArrayList<Byte> sequence = new ArrayList<>();
-    byte[] seq = new byte[5];
-    int counter = 0;
+    static int port = 9999;
+    int[] seq = new int[6];
+    int counter= 0, off = 5;
+    boolean breakMyBones = false;
+    OutputStream outputstream = null;
+
 
 
     @Override
@@ -30,9 +32,14 @@ public class StartScreen extends AppCompatActivity
         setContentView(R.layout.start_screen);
 
         backButton();
-        goButton();
+        connectButton();
         greenButton();
+        yellowButton();
+        blueButton();
         redButton();
+        disconnectButton();
+
+
 
     }
 
@@ -49,9 +56,126 @@ public class StartScreen extends AppCompatActivity
         });
     }
 
-    public void goButton()
+    public void redButton()
     {
-        myButton = (Button) findViewById(R.id.goButton);
+        myButton = (Button) findViewById(R.id.redButton);
+        myButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+
+                new AsyncTask<Integer, Void, Void>()
+                {
+                    @Override
+                    protected Void doInBackground(Integer... params)
+                    {
+
+
+
+
+                            try
+                            {
+                                outputstream.write(off);
+                                System.out.println("Sending " + off);
+
+
+                            } catch (IOException e)
+                            {
+                                e.printStackTrace();
+                            }
+
+                            System.out.println("Sent sequence");
+
+                            try
+                            {
+                                Thread.sleep(15000); //switch every 1.5 seconds
+                            } catch (InterruptedException e)
+                            {
+                                e.printStackTrace();
+                            }
+
+
+
+
+
+
+                        return null;
+                    }
+                }.execute(1);
+
+            }
+        });
+    }
+
+    public void blueButton()
+    {
+        myButton = (Button) findViewById(R.id.blueButton);
+        myButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                new AsyncTask<Integer, Void, Void>()
+                {
+                    @Override
+                    protected Void doInBackground(Integer... params)
+                    {
+
+                        counter = 0;
+                        breakMyBones = false;
+                        while(counter <= seq.length - 1)
+                        {
+
+                            try
+                            {
+                                outputstream.write(seq[counter]);
+                                System.out.println("Sending " + seq[counter]);
+
+
+                            } catch (IOException e)
+                            {
+                                e.printStackTrace();
+                            }
+
+                            System.out.println("Sent sequence");
+
+                            try
+                            {
+                                Thread.sleep(15000); //switch every 1.5 seconds
+                            } catch (InterruptedException e)
+                            {
+                                e.printStackTrace();
+                            }
+
+                            if (counter == seq.length - 1)
+                            {
+                                counter = 0;
+                            }
+                            else if (breakMyBones == true)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                counter++;
+                            }
+
+
+
+                        }
+
+
+                        return null;
+                    }
+                }.execute(1);
+
+            }
+        });
+    }
+
+
+    public void connectButton()
+    {
+        myButton = (Button) findViewById(R.id.connectButton);
         myButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
@@ -75,7 +199,7 @@ public class StartScreen extends AppCompatActivity
                         System.out.println("Connected to server");
 
                         //Exception required here
-                        OutputStream outputstream = null;
+
                         try
                         {
                             outputstream = clientSocket.getOutputStream();
@@ -84,41 +208,32 @@ public class StartScreen extends AppCompatActivity
                             e.printStackTrace();
                         }
 
-                        //byte sequence = 0x00;
 
-                        boolean loop = true;
-                        while(loop)
-                        {
-                            try
-                            {
-                                for(int i = 0; i <= seq.length - 1; i++)
-                                {
-                                    byte b = seq[i];
-                                    outputstream.write(b);
-                                    System.out.println("Sending" + b);
-                                }
-                            } catch (IOException e)
-                            {
-                                e.printStackTrace();
-                            }
-                            //sequence ^= 0x01; //toggle between hit and miss
-                            System.out.println("Sent sequence");
 
-                            try
-                            {
-                                Thread.sleep(1500); //switch every 1.5 seconds
-                            } catch (InterruptedException e)
-                            {
-                                e.printStackTrace();
-                            }
-                            loop = false;
 
-                        }
 
 
                         return null;
                     }
                 }.execute(1);
+            }
+        });
+    }
+
+    public void disconnectButton()
+    {
+        myButton = (Button) findViewById(R.id.disconnectButton);
+        myButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                try
+                {
+                    clientSocket.close();
+                } catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -130,23 +245,28 @@ public class StartScreen extends AppCompatActivity
         {
             public void onClick(View view)
             {
-                //sequence.add((byte)0);
-                seq[counter] = 0;
-                counter++;
+                seq[0] = 16;
+                seq[1] = 4;
+                seq[2] = 0;
+                seq[3] = 1;
+                seq[4] = 0;
+                seq[5] = 1;
+
+                System.out.println("Sent sequence Green");
             }
         });
     }
 
-    public void redButton()
+    public void yellowButton()
     {
-        myButton = (Button) findViewById(R.id.redButton);
+        myButton = (Button) findViewById(R.id.yellowButton);
         myButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
             {
-                //sequence.add((byte)1);
-                seq[counter] = 0;
-                counter++;
+                breakMyBones = true;
+
+
             }
         });
 

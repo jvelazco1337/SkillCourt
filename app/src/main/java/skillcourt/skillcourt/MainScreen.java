@@ -7,16 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.jcraft.jsch.Channel;
-import com.jcraft.jsch.ChannelExec;
-import com.jcraft.jsch.JSch;
-import com.jcraft.jsch.JSchException;
-import com.jcraft.jsch.Session;
-
 import java.io.*;
 import java.net.*;
-
-import java.util.Properties;
 
 public class MainScreen extends AppCompatActivity
 {
@@ -33,131 +25,19 @@ public class MainScreen extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_screen);
 
-        try
-        {
-            testButton();
-        } catch (JSchException e)
-        {
-            e.printStackTrace();
-        }
-        buttonSend0();
-        buttonSend1();
+
+
         buttonSend4();
         startButton();
-        highScoresButton();
-        devicesButton();
+        speedButton();
+        songButton();
+
 
 
 
     }
 
-    public void buttonSend0()
-    {
-        myButton = (Button) findViewById(R.id.buttonSend0);
-        myButton.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View view)
-            {
-                new AsyncTask<Integer, Void, Void>()
-                {
-                    @Override
-                    protected Void doInBackground(Integer... params)
-                    {
-                        try {
-                            Socket socket = new Socket(homeIp, port);
-                            InputStream inputStream = socket.getInputStream();
-                            ByteArrayOutputStream byteArrayOutputStream =
-                                    new ByteArrayOutputStream(1024);
-                            byte[] buffer = new byte[1024];
 
-                            int bytesRead;
-                            while ((bytesRead = inputStream.read(buffer)) != -1){
-                                byteArrayOutputStream.write(buffer, 0, bytesRead);
-                            }
-
-                            socket.close();
-                            response = byteArrayOutputStream.toString("UTF-8");
-
-                        } catch (UnknownHostException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        } catch (IOException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }
-                        return null;
-                    }
-                }.execute(1);
-            }
-        });
-    }
-
-    public void buttonSend1()
-    {
-        myButton = (Button) findViewById(R.id.buttonSend1);
-        myButton.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View view)
-            {
-                new AsyncTask<Integer, Void, Void>()
-                {
-                    @Override
-                    protected Void doInBackground(Integer... params)
-                    {
-                        System.out.println("Setting up");
-
-                        //Exception required here
-                        try
-                        {
-                            clientSocket = new Socket(homeIp, port);
-                        } catch (IOException e)
-                        {
-                            e.printStackTrace();
-                        }
-
-                        System.out.println("Connected to server");
-
-                        //Exception required here
-                        OutputStream outputstream = null;
-                        try
-                        {
-                            outputstream = clientSocket.getOutputStream();
-                        } catch (IOException e)
-                        {
-                            e.printStackTrace();
-                        }
-
-                        byte sequence = 0x00;
-
-                        while(true)
-                        {
-                            //Exception required here
-                            try
-                            {
-                                outputstream.write(sequence);
-                            } catch (IOException e)
-                            {
-                                e.printStackTrace();
-                            }
-                            sequence ^= 0x01; //toggle between hit and miss
-                            System.out.println("Sent sequence");
-
-                            //Exception required here
-                            try
-                            {
-                                Thread.sleep(1500); //switch every 1.5 seconds
-                            } catch (InterruptedException e)
-                            {
-                                e.printStackTrace();
-                            }
-                        }
-
-
-                    }
-                }.execute(1);
-            }
-        });
-    }
 
     public void buttonSend4()
     {
@@ -197,97 +77,11 @@ public class MainScreen extends AppCompatActivity
         });
     }
 
-    public void testButton() throws JSchException
-    {
-        // Button initialization
-        Button test = (Button) findViewById(R.id.testButton);
-        test.setOnClickListener(new View.OnClickListener()
-        {
-            RaspberryPi rasp1 = new RaspberryPi("pi", "raspberry", "192.168.43.99", 22);
 
-            @Override
-            public void onClick(View view)
-            {
-                new AsyncTask<Integer, Void, Void>()
-                {
-                    @Override
-                    protected Void doInBackground(Integer... params)
-                    {
-                        // new JSch object
-                        JSch javaSecure = new JSch();
-
-                        // RaspberryPi object info
-                        String raspUser= rasp1.getUsername();
-                        String raspPass= rasp1.getPassword();
-                        String raspIp= rasp1.getIp();
-                        int raspPort= rasp1.getPort();
-
-                        // Session initiation
-                        Session session = null;
-                        try
-                        {
-                            session = javaSecure.getSession(raspUser, raspIp, raspPort);
-                        } catch (JSchException e)
-                        {
-                            e.printStackTrace();
-                        }
-                        session.setPassword(raspPass);
-
-
-
-                        Properties config = new Properties();
-                        config.put("StrictHostKeyChecking", "no");
-                        session.setConfig(config);
-
-                        // connect to pi with given settings
-                        try
-                        {
-                            session.connect();
-                        } catch (JSchException e)
-                        {
-                            e.printStackTrace();
-                        }
-
-
-                        // new Channel object, and from my understanding the "exec" is to run the terminal
-                        Channel channel = null;
-                        try
-                        {
-                            channel = session.openChannel("exec");
-                        } catch (JSchException e)
-                        {
-                            e.printStackTrace();
-                        }
-                        ChannelExec channelEX = (ChannelExec) channel;
-
-                        // methods to connect and use the command in the terminal
-                        channelEX.setCommand("hi");
-                        try
-                        {
-                            channelEX.connect();
-                        } catch (JSchException e)
-                        {
-                            e.printStackTrace();
-                        }
-                        channelEX.setErrStream(System.err);
-
-
-                        // disconnect the session and the channel
-                        channelEX.disconnect();
-                        session.disconnect();
-
-                        // confirmation print
-                        System.out.println("Exit code: " + channelEX.getExitStatus());
-                        return null;
-                    }
-                }.execute(1);
-            }
-        });
-    }
 
     public void startButton()
     {
-        myButton = (Button) findViewById(R.id.addButton);
+        myButton = (Button) findViewById(R.id.startButton);
         myButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
@@ -298,27 +92,27 @@ public class MainScreen extends AppCompatActivity
         });
     }
 
-    public void highScoresButton()
+    public void speedButton()
     {
-        myButton = (Button) findViewById(R.id.removeButton);
+        myButton = (Button) findViewById(R.id.speedButton);
         myButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
             {
-                Intent intent = new Intent(MainScreen.this, HighScoresScreen.class);
+                Intent intent = new Intent(MainScreen.this, SpeedScreen.class);
                 startActivity(intent);
             }
         });
     }
 
-    public void devicesButton()
+    public void songButton()
     {
-        myButton = (Button) findViewById(R.id.devicesButton);
+        myButton = (Button) findViewById(R.id.songButton);
         myButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
             {
-                Intent intent = new Intent(MainScreen.this, DevicesScreen.class);
+                Intent intent = new Intent(MainScreen.this, SongSelectionScreen.class);
                 startActivity(intent);
             }
         });
