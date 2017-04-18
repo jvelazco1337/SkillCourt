@@ -24,4 +24,72 @@
         android:layout_width="100dp"
         android:layout_height="50dp"/>
 
+    <Button
+        android:id="@+id/connectButton2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="Search Song"
+        android:layout_alignBottom="@+id/backButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"/>
+
+    <EditText
+        android:id="@+id/artistEditText"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_alignTop="@+id/artistTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        android:ems="10"
+        android:hint="Artist Name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/artistTextView"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:text="Artist Name"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:layout_marginTop="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/songTextView"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/artistEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:text="Song Name"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/songEditText"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_alignLeft="@+id/artistEditText"
+        android:layout_alignStart="@+id/artistEditText"
+        android:layout_below="@+id/songTextView"
+        android:layout_marginTop="37dp"
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        android:ems="10"
+        android:hint="Song Name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"/>
+
 </RelativeLayout>

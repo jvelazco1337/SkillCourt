@@ -15,11 +15,12 @@ import java.net.Socket;
 public class StartScreen extends AppCompatActivity
 {
     Button myButton;
+    final int OFF = 5;
     static Socket clientSocket;
-    static String homeIp = "10.109.153.8"; // internal ip of server (aka Pi)
+    static String homeIp = "192.168.0.15"; // internal ip of server (aka Pi)
     static int port = 9999;
     int[] seq = new int[6];
-    int counter= 0, off = 5;
+    int counter= 0;
     boolean breakMyBones = false;
     OutputStream outputstream = null;
 
@@ -69,40 +70,24 @@ public class StartScreen extends AppCompatActivity
                     @Override
                     protected Void doInBackground(Integer... params)
                     {
-
-
-
-
                             try
                             {
-                                outputstream.write(off);
-                                System.out.println("Sending " + off);
-
-
+                                outputstream.write(OFF);
                             } catch (IOException e)
                             {
                                 e.printStackTrace();
                             }
 
-                            System.out.println("Sent sequence");
-
                             try
                             {
-                                Thread.sleep(15000); //switch every 1.5 seconds
+                                Thread.sleep(15000); // sleep every 1.5 seconds
                             } catch (InterruptedException e)
                             {
                                 e.printStackTrace();
                             }
-
-
-
-
-
-
                         return null;
                     }
                 }.execute(1);
-
             }
         });
     }
@@ -128,9 +113,8 @@ public class StartScreen extends AppCompatActivity
                             try
                             {
                                 outputstream.write(seq[counter]);
+                                clientSocket.close();
                                 System.out.println("Sending " + seq[counter]);
-
-
                             } catch (IOException e)
                             {
                                 e.printStackTrace();
@@ -140,7 +124,7 @@ public class StartScreen extends AppCompatActivity
 
                             try
                             {
-                                Thread.sleep(15000); //switch every 1.5 seconds
+                                Thread.sleep(1500); //switch every 1.5 seconds
                             } catch (InterruptedException e)
                             {
                                 e.printStackTrace();
@@ -158,16 +142,10 @@ public class StartScreen extends AppCompatActivity
                             {
                                 counter++;
                             }
-
-
-
                         }
-
-
                         return null;
                     }
                 }.execute(1);
-
             }
         });
     }
@@ -207,12 +185,6 @@ public class StartScreen extends AppCompatActivity
                         {
                             e.printStackTrace();
                         }
-
-
-
-
-
-
                         return null;
                     }
                 }.execute(1);
@@ -245,8 +217,8 @@ public class StartScreen extends AppCompatActivity
         {
             public void onClick(View view)
             {
-                seq[0] = 16;
-                seq[1] = 4;
+                seq[0] = 0;
+                seq[1] = 1;
                 seq[2] = 0;
                 seq[3] = 1;
                 seq[4] = 0;
@@ -265,8 +237,6 @@ public class StartScreen extends AppCompatActivity
             public void onClick(View view)
             {
                 breakMyBones = true;
-
-
             }
         });
 

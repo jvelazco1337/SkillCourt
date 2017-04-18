@@ -16,9 +16,9 @@
         android:id="@+id/yellowButton"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_alignEnd="@+id/connectButton"
+        android:layout_alignEnd="@+id/connectButton2"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/connectButton"
+        android:layout_alignRight="@+id/connectButton2"
         android:background="@android:color/holo_orange_light"
         android:text="Stop"/>
 
@@ -59,8 +59,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignBottom="@+id/blueButton"
-        android:layout_alignEnd="@+id/connectButton"
-        android:layout_alignRight="@+id/connectButton"
+        android:layout_alignEnd="@+id/connectButton2"
+        android:layout_alignRight="@+id/connectButton2"
         android:layout_marginBottom="7dp"
         android:background="@android:color/holo_red_dark"
         android:text="Off"/>
@@ -69,7 +69,7 @@
         android:id="@+id/blueButton"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_above="@+id/connectButton"
+        android:layout_above="@+id/connectButton2"
         android:layout_alignLeft="@+id/greenButton"
         android:layout_alignStart="@+id/greenButton"
         android:layout_marginBottom="56dp"
