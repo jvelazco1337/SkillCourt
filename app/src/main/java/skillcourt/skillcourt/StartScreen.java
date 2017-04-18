@@ -17,8 +17,8 @@ public class StartScreen extends AppCompatActivity
     Button myButton;
     final int OFF = 5;
     static Socket clientSocket;
-    static String homeIp = "192.168.0.15"; // internal ip of server (aka Pi)
-    static int port = 9999;
+    static String homeIp = "10.109.153.8"; // internal ip of server (aka Pi)
+    static int port = 3024;
     int[] seq = new int[6];
     int counter= 0;
     boolean breakMyBones = false;
@@ -113,7 +113,7 @@ public class StartScreen extends AppCompatActivity
                             try
                             {
                                 outputstream.write(seq[counter]);
-                                clientSocket.close();
+
                                 System.out.println("Sending " + seq[counter]);
                             } catch (IOException e)
                             {
@@ -217,12 +217,12 @@ public class StartScreen extends AppCompatActivity
         {
             public void onClick(View view)
             {
-                seq[0] = 0;
-                seq[1] = 1;
-                seq[2] = 0;
-                seq[3] = 1;
-                seq[4] = 0;
-                seq[5] = 1;
+                seq[0] = 1;
+                seq[1] = 0;
+                seq[2] = 1;
+                seq[3] = 0;
+                seq[4] = 1;
+                seq[5] = 0;
 
                 System.out.println("Sent sequence Green");
             }

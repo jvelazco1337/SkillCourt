@@ -16,8 +16,8 @@ public class MainScreen extends AppCompatActivity
 
     static Socket clientSocket;
     static String homeIp = "10.109.153.8"; // internal ip of server (aka Pi)
-    static int port = 3024;
-    String response;
+    static int port = 3031;
+    OutputStream outputstream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,12 +26,12 @@ public class MainScreen extends AppCompatActivity
         setContentView(R.layout.main_screen);
 
 
-
-        buttonSend4();
+        buttonSend7();
+        buttonSend6();
         startButton();
         speedButton();
         songButton();
-
+        connectToPiButton();
 
 
 
@@ -39,9 +39,9 @@ public class MainScreen extends AppCompatActivity
 
 
 
-    public void buttonSend4()
+    public void buttonSend6()
     {
-        myButton = (Button) findViewById(R.id.buttonSend4);
+        myButton = (Button) findViewById(R.id.buttonSend6);
         myButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
@@ -53,22 +53,15 @@ public class MainScreen extends AppCompatActivity
                     {
                         try
                         {
-                            clientSocket = new Socket(homeIp, port);
-                            PrintStream out = new PrintStream(clientSocket.getOutputStream());
-                            out.println("4");
-                        } catch (UnknownHostException e)
-                        {
-                            //Log.e("aaa","Don't know about host: "+homeIp+"."+e.getMessage());
-                            System.out.println("Don't know about host: "+homeIp+"."+e.getMessage());
+                            outputstream.write(6);
 
-                            //System.exit(1);
+                            System.out.println("Sending 6");
                         } catch (IOException e)
                         {
-                            //Log.e("aaa","Couldn't get I/O for the connection to:         "+homeIp+"."+e.getMessage());
-                            System.out.println("Couldn't get I/O for the connection to: "+homeIp+"."+e.getMessage());
-
-                            //System.exit(1);
+                            e.printStackTrace();
                         }
+
+                        System.out.println("6 Sent");
 
                         return null;
                     }
@@ -77,6 +70,36 @@ public class MainScreen extends AppCompatActivity
         });
     }
 
+    public void buttonSend7()
+    {
+        myButton = (Button) findViewById(R.id.sendButton7);
+        myButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                new AsyncTask<Integer, Void, Void>()
+                {
+                    @Override
+                    protected Void doInBackground(Integer... params)
+                    {
+                        try
+                        {
+                            outputstream.write(7);
+
+                            System.out.println("Sending 6");
+                        } catch (IOException e)
+                        {
+                            e.printStackTrace();
+                        }
+
+                        System.out.println("6 Sent");
+
+                        return null;
+                    }
+                }.execute(1);
+            }
+        });
+    }
 
 
     public void startButton()
@@ -114,6 +137,51 @@ public class MainScreen extends AppCompatActivity
             {
                 Intent intent = new Intent(MainScreen.this, SongSelectionScreen.class);
                 startActivity(intent);
+
+            }
+        });
+
+
+    }
+
+    public void connectToPiButton()
+    {
+        myButton = (Button) findViewById(R.id.connectToPiButton);
+        myButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                new AsyncTask<Integer, Void, Void>()
+                {
+                    @Override
+                    protected Void doInBackground(Integer... params)
+                    {
+                        System.out.println("Setting up");
+
+                        //Exception required here
+                        try
+                        {
+                            clientSocket = new Socket(homeIp, port);
+                        } catch (IOException e)
+                        {
+                            e.printStackTrace();
+                        }
+
+                        System.out.println("Connected to server");
+
+                        //Exception required here
+
+                        try
+                        {
+                            outputstream = clientSocket.getOutputStream();
+                        } catch (IOException e)
+                        {
+                            e.printStackTrace();
+                        }
+                        return null;
+                    }
+                }.execute(1);
+
             }
         });
     }

@@ -65,9 +65,8 @@ public class SongSelectionScreen extends AppCompatActivity
                         System.out.println("Setting up");
                         try
                         {
-                            Socket soc = new Socket("192.168.0.15", 9998);
+                            Socket soc = new Socket("172.20.10.12", 9999);
                             DataOutputStream dout = new DataOutputStream(soc.getOutputStream());
-                            //dout.writeUTF(String.valueOf(16));
                             dout.writeUTF(artist + " " + song);
                             dout.flush();
                             dout.close();
