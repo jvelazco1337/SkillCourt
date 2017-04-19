@@ -7,8 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.jcraft.jsch.ChannelExec;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.Session;
+
 import java.io.*;
 import java.net.*;
+import java.util.Properties;
 
 public class MainScreen extends AppCompatActivity
 {
@@ -84,15 +89,38 @@ public class MainScreen extends AppCompatActivity
                     {
                         try
                         {
-                            outputstream.write(7);
+                            System.out.println("Setting up");
+                            JSch jsch = new JSch();
+                            Session session = jsch.getSession("pi", "192.168.0.16", 22);
+                            session.setPassword("raspberry");
 
-                            System.out.println("Sending 6");
-                        } catch (IOException e)
+                            // Avoid asking for key confirmation
+                            Properties prop = new Properties();
+                            prop.put("StrictHostKeyChecking", "no");
+                            session.setConfig(prop);
+
+                            session.connect();
+                            System.out.println("Connected");
+                            // SSH Channel
+                            ChannelExec channelssh = (ChannelExec)
+                                    session.openChannel("exec");
+                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                            channelssh.setOutputStream(baos);
+
+                            // Execute command
+                            channelssh.setCommand("python3 /home/pi/SkillCourtpi/skillpi/test.py");
+                            System.out.println("Command Sent");
+                            channelssh.connect();
+                            channelssh.disconnect();
+                            System.out.println("Closing");
+                            session.disconnect();
+                            System.out.println("Closed");
+
+                        }
+                        catch (Exception e)
                         {
                             e.printStackTrace();
                         }
-
-                        System.out.println("6 Sent");
 
                         return null;
                     }

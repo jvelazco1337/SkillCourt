@@ -8,9 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.jcraft.jsch.ChannelExec;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.Session;
+
+import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.Properties;
 
 /**
  * Created by jvelazco1337 on 4/17/17.
@@ -22,7 +28,8 @@ public class SongSelectionScreen extends AppCompatActivity
     EditText myEditText;
     String song;
     String artist;
-
+    String javiIphoneIp = "172.20.10.12";
+    String javiHouseIp = "192.168.0.16";
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -62,10 +69,48 @@ public class SongSelectionScreen extends AppCompatActivity
                     @Override
                     protected Void doInBackground(Integer... params)
                     {
-                        System.out.println("Setting up");
+
+                        /*try
+                        {
+                            System.out.println("Setting up");
+                            JSch jsch = new JSch();
+                            Session session = jsch.getSession("pi", "192.168.0.16", 22);
+                            session.setPassword("raspberry");
+
+                            // Avoid asking for key confirmation
+                            Properties prop = new Properties();
+                            prop.put("StrictHostKeyChecking", "no");
+                            session.setConfig(prop);
+
+                            session.connect();
+                            System.out.println("Connected");
+                            // SSH Channel
+                            ChannelExec channelssh = (ChannelExec)
+                                    session.openChannel("exec");
+                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                            channelssh.setOutputStream(baos);
+
+                            // Execute command
+                            channelssh.setCommand("python3 /home/pi/SkillCourtpi/skillpi/test2.py");
+                            System.out.println("Command Sent");
+                            channelssh.connect();
+                            channelssh.disconnect();
+                            System.out.println("Closing");
+                            session.disconnect();
+                            System.out.println("Closed");
+
+                        }
+                        catch (Exception e)
+                        {
+                            e.printStackTrace();
+                        }
+
+                        /*System.out.println("Setting up");
                         try
                         {
-                            Socket soc = new Socket("172.20.10.12", 9999);
+                            getSong();
+                            getArtist();
+                            Socket soc = new Socket(javiHouseIp, 9997);
                             DataOutputStream dout = new DataOutputStream(soc.getOutputStream());
                             dout.writeUTF(artist + " " + song);
                             dout.flush();
@@ -77,7 +122,7 @@ public class SongSelectionScreen extends AppCompatActivity
                         catch(Exception e)
                         {
                             e.printStackTrace();
-                        }
+                        }*/
                         return null;
                     }
                 }.execute(1);
