@@ -7,9 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.jcraft.jsch.ChannelExec;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.Session;
+
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.util.Properties;
 
 
 public class StartScreen extends AppCompatActivity
@@ -18,11 +24,17 @@ public class StartScreen extends AppCompatActivity
     final int OFF = 5;
     static Socket clientSocket;
     static String homeIp = "10.109.153.8"; // internal ip of server (aka Pi)
-    static int port = 3024;
+    static int port = 3046;
     int[] seq = new int[6];
     int counter= 0;
     boolean breakMyBones = false;
     OutputStream outputstream = null;
+    String username = "pi";
+    String password = "raspberry";
+    String javiIphoneIp = "172.20.10.12";
+    String javiHouseIp = "192.168.0.16";
+    String rijPiFiuIp = "10.109.190.28";
+    String pabloPiFiuIp = "10.109.153.8";
 
 
 
@@ -73,6 +85,7 @@ public class StartScreen extends AppCompatActivity
                             try
                             {
                                 outputstream.write(OFF);
+                                System.out.println("sent off which means 5");
                             } catch (IOException e)
                             {
                                 e.printStackTrace();
@@ -168,7 +181,7 @@ public class StartScreen extends AppCompatActivity
                         //Exception required here
                         try
                         {
-                            clientSocket = new Socket(homeIp, port);
+                            clientSocket = new Socket(pabloPiFiuIp, port);
                         } catch (IOException e)
                         {
                             e.printStackTrace();
@@ -199,13 +212,7 @@ public class StartScreen extends AppCompatActivity
         {
             public void onClick(View view)
             {
-                try
-                {
-                    clientSocket.close();
-                } catch (IOException e)
-                {
-                    e.printStackTrace();
-                }
+
             }
         });
     }

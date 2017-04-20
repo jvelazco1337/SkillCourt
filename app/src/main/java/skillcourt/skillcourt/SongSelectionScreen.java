@@ -28,8 +28,14 @@ public class SongSelectionScreen extends AppCompatActivity
     EditText myEditText;
     String song;
     String artist;
+    String username = "pi";
+    String password = "raspberry";
     String javiIphoneIp = "172.20.10.12";
     String javiHouseIp = "192.168.0.16";
+    String rijPiFiuIp = "10.109.190.28";
+    String pabloPiFiuIp = "10.109.153.8";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -70,12 +76,12 @@ public class SongSelectionScreen extends AppCompatActivity
                     protected Void doInBackground(Integer... params)
                     {
 
-                        /*try
+                        try
                         {
                             System.out.println("Setting up");
                             JSch jsch = new JSch();
-                            Session session = jsch.getSession("pi", "192.168.0.16", 22);
-                            session.setPassword("raspberry");
+                            Session session = jsch.getSession(username, rijPiFiuIp, 22);
+                            session.setPassword(password);
 
                             // Avoid asking for key confirmation
                             Properties prop = new Properties();
@@ -91,7 +97,8 @@ public class SongSelectionScreen extends AppCompatActivity
                             channelssh.setOutputStream(baos);
 
                             // Execute command
-                            channelssh.setCommand("python3 /home/pi/SkillCourtpi/skillpi/test2.py");
+                            channelssh.setCommand("/home/pi/SCFS/audioPlayer.py " + artist + " " + song);
+                            
                             System.out.println("Command Sent");
                             channelssh.connect();
                             channelssh.disconnect();
@@ -104,6 +111,8 @@ public class SongSelectionScreen extends AppCompatActivity
                         {
                             e.printStackTrace();
                         }
+
+                        return null;
 
                         /*System.out.println("Setting up");
                         try
@@ -123,7 +132,7 @@ public class SongSelectionScreen extends AppCompatActivity
                         {
                             e.printStackTrace();
                         }*/
-                        return null;
+
                     }
                 }.execute(1);
             }
