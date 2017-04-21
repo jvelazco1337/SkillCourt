@@ -29,10 +29,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SpeedScreen"
-            android:label="Acceleration">
-        </activity>
-        <activity
             android:name=".StartScreen"
             android:label="Start">
         </activity>

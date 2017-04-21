@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ToggleButton;
 
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.JSch;
@@ -21,14 +23,17 @@ import java.util.Properties;
 public class StartScreen extends AppCompatActivity
 {
     Button myButton;
-    final int OFF = 5;
+    ImageButton myImageButton;
+
     static Socket clientSocket;
-    static String homeIp = "10.109.153.8"; // internal ip of server (aka Pi)
+    OutputStream myOutStream = null;
+
     static int port = 3046;
     int[] seq = new int[6];
     int counter= 0;
-    boolean breakMyBones = false;
-    OutputStream outputstream = null;
+    boolean pauseSequence = false;
+    final int OFF = 6;
+
     String username = "pi";
     String password = "raspberry";
     String javiIphoneIp = "172.20.10.12";
@@ -47,19 +52,16 @@ public class StartScreen extends AppCompatActivity
         backButton();
         connectButton();
         greenButton();
-        yellowButton();
+        pauseButton();
         blueButton();
-        redButton();
         disconnectButton();
-
-
-
     }
+
 
     public void backButton()
     {
-        myButton = (Button) findViewById(R.id.backButton);
-        myButton.setOnClickListener(new View.OnClickListener()
+        myImageButton = (ImageButton) findViewById(R.id.backButton);
+        myImageButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
             {
@@ -69,41 +71,7 @@ public class StartScreen extends AppCompatActivity
         });
     }
 
-    public void redButton()
-    {
-        myButton = (Button) findViewById(R.id.redButton);
-        myButton.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View view)
-            {
 
-                new AsyncTask<Integer, Void, Void>()
-                {
-                    @Override
-                    protected Void doInBackground(Integer... params)
-                    {
-                            try
-                            {
-                                outputstream.write(OFF);
-                                System.out.println("sent off which means 5");
-                            } catch (IOException e)
-                            {
-                                e.printStackTrace();
-                            }
-
-                            try
-                            {
-                                Thread.sleep(15000); // sleep every 1.5 seconds
-                            } catch (InterruptedException e)
-                            {
-                                e.printStackTrace();
-                            }
-                        return null;
-                    }
-                }.execute(1);
-            }
-        });
-    }
 
     public void blueButton()
     {
@@ -119,26 +87,28 @@ public class StartScreen extends AppCompatActivity
                     {
 
                         counter = 0;
-                        breakMyBones = false;
+                        pauseSequence = false;
                         while(counter <= seq.length - 1)
                         {
 
                             try
                             {
-                                outputstream.write(seq[counter]);
+                                myOutStream.write(seq[counter]);
 
                                 System.out.println("Sending " + seq[counter]);
-                            } catch (IOException e)
+                            }
+                            catch (IOException e)
                             {
                                 e.printStackTrace();
                             }
 
-                            System.out.println("Sent sequence");
+                            System.out.println("Sent Sequence");
 
                             try
                             {
                                 Thread.sleep(1500); //switch every 1.5 seconds
-                            } catch (InterruptedException e)
+                            }
+                            catch (InterruptedException e)
                             {
                                 e.printStackTrace();
                             }
@@ -147,7 +117,7 @@ public class StartScreen extends AppCompatActivity
                             {
                                 counter = 0;
                             }
-                            else if (breakMyBones == true)
+                            else if (pauseSequence == true)
                             {
                                 break;
                             }
@@ -182,19 +152,19 @@ public class StartScreen extends AppCompatActivity
                         try
                         {
                             clientSocket = new Socket(pabloPiFiuIp, port);
-                        } catch (IOException e)
+                        }
+                        catch (IOException e)
                         {
                             e.printStackTrace();
                         }
 
                         System.out.println("Connected to server");
 
-                        //Exception required here
-
                         try
                         {
-                            outputstream = clientSocket.getOutputStream();
-                        } catch (IOException e)
+                            myOutStream = clientSocket.getOutputStream();
+                        }
+                        catch (IOException e)
                         {
                             e.printStackTrace();
                         }
@@ -212,14 +182,25 @@ public class StartScreen extends AppCompatActivity
         {
             public void onClick(View view)
             {
+                try
+                {
+                    myOutStream.write(OFF);
+                    myOutStream.close();
+                    clientSocket.close();
+                }
+                catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
 
+                System.out.println("Disconnected Successfully");
             }
         });
     }
 
     public void greenButton()
     {
-        myButton = (Button) findViewById(R.id.greenButton);
+        myButton = (Button) findViewById(R.id.setSeqButton);
         myButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
@@ -231,19 +212,20 @@ public class StartScreen extends AppCompatActivity
                 seq[4] = 1;
                 seq[5] = 0;
 
-                System.out.println("Sent sequence Green");
+                System.out.println("Sequence Sent");
             }
         });
     }
 
-    public void yellowButton()
+    public void pauseButton()
     {
-        myButton = (Button) findViewById(R.id.yellowButton);
+        myButton = (Button) findViewById(R.id.pauseButton);
         myButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
             {
-                breakMyBones = true;
+                pauseSequence = true;
+                System.out.println("Pausing Sequence");
             }
         });
 

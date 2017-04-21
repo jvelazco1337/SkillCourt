@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/high_scores"
     android:layout_width="match_parent"
@@ -10,30 +11,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/pi_image"
-    tools:context="skillcourt.skillcourt.SpeedScreen">
-
-    <Button
-        android:text="Back"
-        android:id="@+id/backButton"
-        android:textAlignment="center"
-        android:elevation="0dp"
-        android:layout_row="3"
-        android:layout_column="0"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="31dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"/>
-
-    <Button
-        android:id="@+id/connectButton2"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:text="Search Song"
-        android:layout_alignBottom="@+id/backButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="28dp"
-        android:layout_marginEnd="28dp"/>
+    tools:context="skillcourt.skillcourt.SongSelectionScreen">
 
     <EditText
         android:id="@+id/artistEditText"
@@ -91,5 +69,34 @@
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textColorHint="@color/common_google_signin_btn_text_dark_default"/>
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:elevation="0dp"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/songTextView"
+        android:layout_toStartOf="@+id/songTextView"/>
+
+    <ImageButton
+        android:id="@+id/playSongButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@android:drawable/ic_media_play"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/songEditText"
+        android:layout_alignEnd="@+id/songEditText"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp"/>
+
+    <ImageButton
+        android:id="@+id/stopSongButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@android:drawable/checkbox_off_background"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
