@@ -28,7 +28,7 @@ public class StartScreen extends AppCompatActivity
     static Socket clientSocket;
     OutputStream myOutStream = null;
 
-    static int port = 3046;
+    static int port = 3024;
     int[] seq = new int[6];
     int counter= 0;
     boolean pauseSequence = false;
@@ -40,6 +40,7 @@ public class StartScreen extends AppCompatActivity
     String javiHouseIp = "192.168.0.16";
     String rijPiFiuIp = "10.109.190.28";
     String pabloPiFiuIp = "10.109.153.8";
+    String pabloPhoneIp = "192.168.43.56";
 
 
 
@@ -182,18 +183,26 @@ public class StartScreen extends AppCompatActivity
         {
             public void onClick(View view)
             {
-                try
+                new AsyncTask<Integer, Void, Void>()
                 {
-                    myOutStream.write(OFF);
-                    myOutStream.close();
-                    clientSocket.close();
-                }
-                catch (IOException e)
-                {
-                    e.printStackTrace();
-                }
+                    @Override
+                    protected Void doInBackground(Integer... params)
+                    {
+                        try
+                        {
+                            myOutStream.write(OFF);
+                            myOutStream.close();
+                            clientSocket.close();
+                        }
+                        catch (IOException e)
+                        {
+                            e.printStackTrace();
+                        }
 
-                System.out.println("Disconnected Successfully");
+                        System.out.println("Disconnected Successfully");
+                        return null;
+                    }
+                }.execute(1);
             }
         });
     }
@@ -212,7 +221,7 @@ public class StartScreen extends AppCompatActivity
                 seq[4] = 1;
                 seq[5] = 0;
 
-                System.out.println("Sequence Sent");
+                System.out.println("Sequence Assigned");
             }
         });
     }

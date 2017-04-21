@@ -2,31 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\jvela\Desktop\SkillCourt\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="49421a37f078baa8c07c979f6620895f1cddda5c">
-        <dex dex="C:\Users\jvela\Desktop\SkillCourt\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_57322bd9a92dbdde98c7691c4ec3b1feedb35564\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\jvela\Desktop\SkillCourt\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\jvela\Desktop\SkillCourt\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_f626d33830fa902de07f5933d554e9cc11064c19\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\jvela\Desktop\SkillCourt\app\libs\jsch-0.1.54.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/jvelazco1337/Desktop/SkillCourt/app/libs/jsch-0.1.54.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="0d7d8aba0d11e8cd2f775f47cd3a6cfbf2837da4">
-        <dex dex="C:\Users\jvela\Desktop\SkillCourt\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsch-0.1.54_8010c87f2fe0ac6c2ac35af77be223d3f9c45181\classes.dex" />
+        <dex dex="/Users/jvelazco1337/Desktop/SkillCourt/app/build/intermediates/pre-dexed/debug/jsch-0.1.54_112b0cb279fe336145fc064d2b95994c24cc52a8.jar" />
     </item>
 
 </items>

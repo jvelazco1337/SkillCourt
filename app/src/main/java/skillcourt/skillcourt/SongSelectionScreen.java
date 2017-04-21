@@ -76,7 +76,7 @@ public class SongSelectionScreen extends AppCompatActivity
                         {
                             System.out.println("Setting up");
                             JSch jsch = new JSch();
-                            Session session = jsch.getSession(username, javiHouseIp, 22);
+                            Session session = jsch.getSession(username, pabloPiFiuIp, 22);
                             session.setPassword(password);
 
                             // Avoid asking for key confirmation
@@ -155,7 +155,7 @@ public class SongSelectionScreen extends AppCompatActivity
                         {
                             System.out.println("Setting up");
                             JSch jsch = new JSch();
-                            Session session = jsch.getSession(username, javiHouseIp, 22);
+                            Session session = jsch.getSession(username, pabloPiFiuIp, 22);
                             session.setPassword(password);
 
                             // Avoid asking for key confirmation
