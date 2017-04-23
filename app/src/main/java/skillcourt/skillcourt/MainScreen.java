@@ -106,7 +106,6 @@ public class MainScreen extends AppCompatActivity
                             System.out.println("Closing");                              // Print to show progress of closing
                             session.disconnect();                                       // Closing of the session
                             System.out.println("Closed");                               // Print to show the session closed
-
                         }
                         catch (Exception e)
                         {
