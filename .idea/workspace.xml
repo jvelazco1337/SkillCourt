@@ -43,23 +43,18 @@
       <file leaf-file-name="MainScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/MainScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="107" column="123" selection-start-line="107" selection-start-column="123" selection-end-line="107" selection-end-column="123" />
-              <folding>
-                <element signature="e#1895#5479#0" expanded="true" />
-                <element signature="e#2264#5443#0" expanded="true" />
-                <element signature="e#5442#5443#0" expanded="true" />
-                <element signature="e#5478#5479#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="28" column="30" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SongSelectionScreen.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SongSelectionScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/SongSelectionScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3621">
-              <caret line="213" column="47" selection-start-line="213" selection-start-column="47" selection-end-line="213" selection-end-column="47" />
+            <state relative-caret-position="-170">
+              <caret line="86" column="78" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1845#2149#0" expanded="true" />
@@ -68,11 +63,48 @@
                 <element signature="e#2717#5826#0" expanded="true" />
                 <element signature="e#5825#5826#0" expanded="true" />
                 <element signature="e#5861#5862#0" expanded="true" />
-                <element signature="e#6250#9870#0" expanded="true" />
-                <element signature="e#6624#9834#0" expanded="true" />
-                <element signature="e#9833#9834#0" expanded="true" />
-                <element signature="e#9869#9870#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartScreen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/StartScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="606">
+              <caret line="271" column="96" selection-start-line="271" selection-start-column="96" selection-end-line="271" selection-end-column="96" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2519#5164#0" expanded="true" />
+                <element signature="e#2708#5128#0" expanded="true" />
+                <element signature="e#5127#5128#0" expanded="true" />
+                <element signature="e#5163#5164#0" expanded="true" />
+                <element signature="e#5409#6896#0" expanded="true" />
+                <element signature="e#5598#6860#0" expanded="true" />
+                <element signature="e#6859#6860#0" expanded="true" />
+                <element signature="e#6895#6896#0" expanded="true" />
+                <element signature="e#7308#8370#0" expanded="true" />
+                <element signature="e#7497#8334#0" expanded="true" />
+                <element signature="e#8333#8334#0" expanded="true" />
+                <element signature="e#8369#8370#0" expanded="true" />
+                <element signature="e#8630#9054#0" expanded="true" />
+                <element signature="e#9053#9054#0" expanded="true" />
+                <element signature="e#9379#9665#0" expanded="true" />
+                <element signature="e#9664#9665#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start_screen.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/start_screen.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1910,11 +1942,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/image_rounded_corners.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/button_round.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/song_selection_screen.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/start_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_screen.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/StartScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/MainScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/SongSelectionScreen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/start_screen.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/StartScreen.java" />
       </list>
     </option>
   </component>
@@ -1949,9 +1981,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane />
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1972,6 +2007,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SkillCourt" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2018,9 +2071,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2430,24 +2480,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_screen.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/StartScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2910">
           <caret line="203" column="25" selection-start-line="203" selection-start-column="25" selection-end-line="203" selection-end-column="25" />
           <folding>
-            <element signature="e#5201#5202#0" expanded="true" />
-            <element signature="e#6536#6537#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2519#5164#0" expanded="true" />
+            <element signature="e#2708#5128#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5163#5164#0" expanded="true" />
+            <element signature="e#5409#6896#0" expanded="true" />
+            <element signature="e#5598#6860#0" expanded="true" />
+            <element signature="e#6859#6860#0" expanded="true" />
+            <element signature="e#6895#6896#0" expanded="true" />
+            <element signature="e#7308#8370#0" expanded="true" />
+            <element signature="e#7497#8334#0" expanded="true" />
+            <element signature="e#8333#8334#0" expanded="true" />
+            <element signature="e#8369#8370#0" expanded="true" />
+            <element signature="e#8630#9054#0" expanded="true" />
+            <element signature="e#9053#9054#0" expanded="true" />
+            <element signature="e#9379#9665#0" expanded="true" />
+            <element signature="e#9664#9665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2464,10 +2518,6 @@
             <element signature="e#2717#5826#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#5861#5862#0" expanded="true" />
-            <element signature="e#6250#9870#0" expanded="true" />
-            <element signature="e#6624#9834#0" expanded="true" />
-            <element signature="e#9833#9834#0" expanded="true" />
-            <element signature="e#9869#9870#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2517,10 +2567,6 @@
             <element signature="e#2717#5826#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#5861#5862#0" expanded="true" />
-            <element signature="e#6250#9870#0" expanded="true" />
-            <element signature="e#6624#9834#0" expanded="true" />
-            <element signature="e#9833#9834#0" expanded="true" />
-            <element signature="e#9869#9870#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2529,12 +2575,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2100">
           <caret line="204" column="9" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
-          <folding>
-            <element signature="e#1895#5479#0" expanded="true" />
-            <element signature="e#2264#5443#0" expanded="true" />
-            <element signature="e#5442#5443#0" expanded="true" />
-            <element signature="e#5478#5479#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2554,8 +2595,23 @@
         <state relative-caret-position="1530">
           <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
           <folding>
-            <element signature="e#5201#5202#0" expanded="true" />
-            <element signature="e#6536#6537#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2519#5164#0" expanded="true" />
+            <element signature="e#2708#5128#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5163#5164#0" expanded="true" />
+            <element signature="e#5409#6896#0" expanded="true" />
+            <element signature="e#5598#6860#0" expanded="true" />
+            <element signature="e#6859#6860#0" expanded="true" />
+            <element signature="e#6895#6896#0" expanded="true" />
+            <element signature="e#7308#8370#0" expanded="true" />
+            <element signature="e#7497#8334#0" expanded="true" />
+            <element signature="e#8333#8334#0" expanded="true" />
+            <element signature="e#8369#8370#0" expanded="true" />
+            <element signature="e#8630#9054#0" expanded="true" />
+            <element signature="e#9053#9054#0" expanded="true" />
+            <element signature="e#9379#9665#0" expanded="true" />
+            <element signature="e#9664#9665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2575,12 +2631,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2985">
           <caret line="263" column="33" selection-start-line="263" selection-start-column="33" selection-end-line="263" selection-end-column="33" />
-          <folding>
-            <element signature="e#1895#5479#0" expanded="true" />
-            <element signature="e#2264#5443#0" expanded="true" />
-            <element signature="e#5442#5443#0" expanded="true" />
-            <element signature="e#5478#5479#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2600,8 +2651,23 @@
         <state relative-caret-position="1950">
           <caret line="140" column="5" selection-start-line="140" selection-start-column="5" selection-end-line="140" selection-end-column="5" />
           <folding>
-            <element signature="e#5201#5202#0" expanded="true" />
-            <element signature="e#6536#6537#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2519#5164#0" expanded="true" />
+            <element signature="e#2708#5128#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5163#5164#0" expanded="true" />
+            <element signature="e#5409#6896#0" expanded="true" />
+            <element signature="e#5598#6860#0" expanded="true" />
+            <element signature="e#6859#6860#0" expanded="true" />
+            <element signature="e#6895#6896#0" expanded="true" />
+            <element signature="e#7308#8370#0" expanded="true" />
+            <element signature="e#7497#8334#0" expanded="true" />
+            <element signature="e#8333#8334#0" expanded="true" />
+            <element signature="e#8369#8370#0" expanded="true" />
+            <element signature="e#8630#9054#0" expanded="true" />
+            <element signature="e#9053#9054#0" expanded="true" />
+            <element signature="e#9379#9665#0" expanded="true" />
+            <element signature="e#9664#9665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2621,12 +2687,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1895#5479#0" expanded="true" />
-            <element signature="e#2264#5443#0" expanded="true" />
-            <element signature="e#5442#5443#0" expanded="true" />
-            <element signature="e#5478#5479#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2646,8 +2707,23 @@
         <state relative-caret-position="1950">
           <caret line="140" column="5" selection-start-line="140" selection-start-column="5" selection-end-line="140" selection-end-column="5" />
           <folding>
-            <element signature="e#5201#5202#0" expanded="true" />
-            <element signature="e#6536#6537#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2519#5164#0" expanded="true" />
+            <element signature="e#2708#5128#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5163#5164#0" expanded="true" />
+            <element signature="e#5409#6896#0" expanded="true" />
+            <element signature="e#5598#6860#0" expanded="true" />
+            <element signature="e#6859#6860#0" expanded="true" />
+            <element signature="e#6895#6896#0" expanded="true" />
+            <element signature="e#7308#8370#0" expanded="true" />
+            <element signature="e#7497#8334#0" expanded="true" />
+            <element signature="e#8333#8334#0" expanded="true" />
+            <element signature="e#8369#8370#0" expanded="true" />
+            <element signature="e#8630#9054#0" expanded="true" />
+            <element signature="e#9053#9054#0" expanded="true" />
+            <element signature="e#9379#9665#0" expanded="true" />
+            <element signature="e#9664#9665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2667,12 +2743,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="27" selection-start-line="24" selection-start-column="4" selection-end-line="26" selection-end-column="27" />
-          <folding>
-            <element signature="e#1895#5479#0" expanded="true" />
-            <element signature="e#2264#5443#0" expanded="true" />
-            <element signature="e#5442#5443#0" expanded="true" />
-            <element signature="e#5478#5479#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2692,8 +2763,23 @@
         <state relative-caret-position="1620">
           <caret line="118" column="31" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="35" />
           <folding>
-            <element signature="e#5201#5202#0" expanded="true" />
-            <element signature="e#6536#6537#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2519#5164#0" expanded="true" />
+            <element signature="e#2708#5128#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5163#5164#0" expanded="true" />
+            <element signature="e#5409#6896#0" expanded="true" />
+            <element signature="e#5598#6860#0" expanded="true" />
+            <element signature="e#6859#6860#0" expanded="true" />
+            <element signature="e#6895#6896#0" expanded="true" />
+            <element signature="e#7308#8370#0" expanded="true" />
+            <element signature="e#7497#8334#0" expanded="true" />
+            <element signature="e#8333#8334#0" expanded="true" />
+            <element signature="e#8369#8370#0" expanded="true" />
+            <element signature="e#8630#9054#0" expanded="true" />
+            <element signature="e#9053#9054#0" expanded="true" />
+            <element signature="e#9379#9665#0" expanded="true" />
+            <element signature="e#9664#9665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2713,12 +2799,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="27" selection-start-line="24" selection-start-column="4" selection-end-line="26" selection-end-column="27" />
-          <folding>
-            <element signature="e#1895#5479#0" expanded="true" />
-            <element signature="e#2264#5443#0" expanded="true" />
-            <element signature="e#5442#5443#0" expanded="true" />
-            <element signature="e#5478#5479#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2738,8 +2819,23 @@
         <state relative-caret-position="1620">
           <caret line="118" column="31" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="35" />
           <folding>
-            <element signature="e#5201#5202#0" expanded="true" />
-            <element signature="e#6536#6537#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2519#5164#0" expanded="true" />
+            <element signature="e#2708#5128#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5163#5164#0" expanded="true" />
+            <element signature="e#5409#6896#0" expanded="true" />
+            <element signature="e#5598#6860#0" expanded="true" />
+            <element signature="e#6859#6860#0" expanded="true" />
+            <element signature="e#6895#6896#0" expanded="true" />
+            <element signature="e#7308#8370#0" expanded="true" />
+            <element signature="e#7497#8334#0" expanded="true" />
+            <element signature="e#8333#8334#0" expanded="true" />
+            <element signature="e#8369#8370#0" expanded="true" />
+            <element signature="e#8630#9054#0" expanded="true" />
+            <element signature="e#9053#9054#0" expanded="true" />
+            <element signature="e#9379#9665#0" expanded="true" />
+            <element signature="e#9664#9665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2759,12 +2855,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1895#5479#0" expanded="true" />
-            <element signature="e#2264#5443#0" expanded="true" />
-            <element signature="e#5442#5443#0" expanded="true" />
-            <element signature="e#5478#5479#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2783,12 +2874,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1895#5479#0" expanded="true" />
-            <element signature="e#2264#5443#0" expanded="true" />
-            <element signature="e#5442#5443#0" expanded="true" />
-            <element signature="e#5478#5479#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2857,45 +2943,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/start_screen.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/StartScreen.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/SplashScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2922">
-          <caret line="212" column="36" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
-          <folding>
-            <element signature="e#5201#5202#0" expanded="true" />
-            <element signature="e#6536#6537#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/MainScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="107" column="123" selection-start-line="107" selection-start-column="123" selection-end-line="107" selection-end-column="123" />
-          <folding>
-            <element signature="e#1895#5479#0" expanded="true" />
-            <element signature="e#2264#5443#0" expanded="true" />
-            <element signature="e#5442#5443#0" expanded="true" />
-            <element signature="e#5478#5479#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="28" column="30" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/start_screen.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/SongSelectionScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3621">
-          <caret line="213" column="47" selection-start-line="213" selection-start-column="47" selection-end-line="213" selection-end-column="47" />
+        <state relative-caret-position="-170">
+          <caret line="86" column="78" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1845#2149#0" expanded="true" />
@@ -2904,10 +2982,32 @@
             <element signature="e#2717#5826#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#5861#5862#0" expanded="true" />
-            <element signature="e#6250#9870#0" expanded="true" />
-            <element signature="e#6624#9834#0" expanded="true" />
-            <element signature="e#9833#9834#0" expanded="true" />
-            <element signature="e#9869#9870#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/skillcourt/skillcourt/StartScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="271" column="96" selection-start-line="271" selection-start-column="96" selection-end-line="271" selection-end-column="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2519#5164#0" expanded="true" />
+            <element signature="e#2708#5128#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5163#5164#0" expanded="true" />
+            <element signature="e#5409#6896#0" expanded="true" />
+            <element signature="e#5598#6860#0" expanded="true" />
+            <element signature="e#6859#6860#0" expanded="true" />
+            <element signature="e#6895#6896#0" expanded="true" />
+            <element signature="e#7308#8370#0" expanded="true" />
+            <element signature="e#7497#8334#0" expanded="true" />
+            <element signature="e#8333#8334#0" expanded="true" />
+            <element signature="e#8369#8370#0" expanded="true" />
+            <element signature="e#8630#9054#0" expanded="true" />
+            <element signature="e#9053#9054#0" expanded="true" />
+            <element signature="e#9379#9665#0" expanded="true" />
+            <element signature="e#9664#9665#0" expanded="true" />
           </folding>
         </state>
       </provider>

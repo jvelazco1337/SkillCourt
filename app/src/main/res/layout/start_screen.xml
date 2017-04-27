@@ -40,13 +40,13 @@
         android:layout_height="50dp"
         android:background="@android:drawable/button_onoff_indicator_on"
         android:text="Assign Sequence"
-        android:layout_below="@+id/blueButton"
+        android:layout_below="@+id/sendSeqButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="19dp"/>
 
     <Button
-        android:id="@+id/blueButton"
+        android:id="@+id/sendSeqButton"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="22dp"
